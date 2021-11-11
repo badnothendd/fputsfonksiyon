@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	FILE *filep;
+	char text[245];
+	filep= fopen("yaz.txt", "a");
+	
+	 if (filep==NULL) {
+	 	printf("BASARİSİZ");
+	 	
+	 }
+	else {
+		printf("bir sey yaz: ");
+		fgets(text, 245, stdin);
+		fputs(text, filep);
+		printf("dosyaya yazildi");
+		fclose(filep);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	return 0;
+}
